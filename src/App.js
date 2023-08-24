@@ -1,4 +1,3 @@
-import SideBar from "./Components/Sidebar";
 import { BrowserRouter , Route , Routes } from "react-router-dom";
 import About from './Pages/About';
 import Home from "./Pages/Home";
@@ -12,7 +11,7 @@ import Vendor from "./Pages/Vendor";
 import Received from "./Pages/Received";
 import Issue from "./Pages/Issue";
 import Logout from "./Pages/Logout";
-
+import Chart from "./Pages/Chart";
 function App() {
   return (
     <>
@@ -30,6 +29,7 @@ function App() {
       <Route path="/about" exact element={<About/>}></Route>
       <Route path="setting" exact element={<Setting/>}></Route>
       <Route path="logout" exact element={<Logout/>}></Route>
+      <Route path="charts" exact element={<Chart/>}></Route>
     </Routes>
     </BrowserRouter>
     </>

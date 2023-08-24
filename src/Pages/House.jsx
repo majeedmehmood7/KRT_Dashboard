@@ -2,6 +2,8 @@ import React from 'react';
 import SideBar from '../Components/Sidebar';
 import Navbar from '../Components/Navbar';
 import Box from '@mui/material/Box';
+import HouseTable from './House/HouseTable';
+import Footer from '../Components/Footer';
 
 const House = () => {
   return (
@@ -11,9 +13,11 @@ const House = () => {
     <Box sx={{ display: 'flex' }}>
     <SideBar/>
     <Box component="main" sx={{flexGrow: 1 , p:3}}>
-    <h2>House</h2>
+    <Box height={30}/>
+    <HouseTable/>
     </Box>
     </Box>
+    <Footer/>
     </>
   )
 }

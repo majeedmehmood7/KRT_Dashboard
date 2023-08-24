@@ -2,15 +2,15 @@ import React from "react";
 import { Chart } from "react-google-charts";
 
 export const data = [
-  ["Year", "Sales", "Expenses"],
-  ["2004", 1000, 400],
-  ["2005", 1170, 460],
-  ["2006", 660, 1120],
-  ["2007", 1030, 540],
+  ["Unit", "Cement", "Stone", "Sand", "Crush", "Blocks", "A class Block"],
+  ["2004", 1000, 400, 300, 200, 700, 100],
+  ["2005", 1170, 460, 500, 300, 800, 150],
+  ["2006", 660, 1120, 200, 100, 400, 50],
+  ["2007", 1030, 540, 400, 250, 600, 75],
 ];
 
 export const options = {
-  title: "Company Performance",
+  title: "Performance",
   curveType: "function",
   legend: { position: "bottom" },
 };
@@ -19,8 +19,8 @@ export function LineChart() {
   return (
     <Chart
       chartType="LineChart"
-      width="100%"
-      height="400px"
+      width="10vw" // Set width to 100vw for full viewport width
+      height="100px"
       data={data}
       options={options}
     />

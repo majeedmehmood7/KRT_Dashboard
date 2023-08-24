@@ -5,7 +5,7 @@ import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
 import Stack from '@mui/material/Stack';
 
-const AddLocation = () => {
+const Adduser = () => {
     return (
         <Box
           component="form"
@@ -15,11 +15,11 @@ const AddLocation = () => {
           noValidate
           autoComplete="off"
         >
-            <h3>Add Location </h3>
-          <TextField id="outlined-basic" label="Provinces" variant="outlined" size='small' sx={{minWidth: '100%'} }/>
-          <TextField id="outlined-basic" label="District" variant="outlined" size='small' sx={{minWidth: '100%'} }/>
-          <TextField id="outlined-basic" label="City" variant="outlined" size='small' sx={{minWidth: '100%'} } />
-          <TextField id="outlined-basic" label="Villages" variant="outlined" size='small' sx={{minWidth: '100%'} }/>
+            <h3>Add Users </h3>
+          <TextField id="outlined-basic" label="Username" variant="outlined" size='small' sx={{minWidth: '100%'} }/>
+          <TextField id="outlined-basic" label="Type" variant="outlined" size='small' sx={{minWidth: '100%'} }/>
+          <TextField id="outlined-basic" label="Password" variant="outlined" size='small' sx={{minWidth: '100%'} } />
+          <TextField id="outlined-basic" label="Confirm Password" variant="outlined" size='small' sx={{minWidth: '100%'} }/>
           <Stack direction="row" spacing={2}>
           <Button variant="contained" endIcon={<AddIcon />}>
             Add
@@ -29,4 +29,4 @@ const AddLocation = () => {
       );
     }
 
-export default AddLocation
+export default Adduser;

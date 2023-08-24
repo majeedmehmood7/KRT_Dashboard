@@ -1,10 +1,12 @@
 import React from 'react';
-import Box from '@mui/material/Box';
 import SideBar from '../Components/Sidebar';
 import Navbar from '../Components/Navbar';
+import Box from '@mui/material/Box';
+import { PieChart } from '../Charts/Piechart';
+import { GeoChart } from '../Charts/Geochart';
 import Footer from '../Components/Footer';
 
-const Logout = () => {
+const Chart = () => {
   return (
     <>
     <Navbar/>
@@ -12,7 +14,8 @@ const Logout = () => {
     <Box sx={{ display: 'flex' }}>
     <SideBar/>
     <Box component="main" sx={{flexGrow: 1 , p:3}}>
-    <h2>Logout</h2>
+    <PieChart/>
+    <GeoChart/>
     </Box>
     </Box>
     <Footer/>
@@ -20,4 +23,4 @@ const Logout = () => {
   )
 }
 
-export default Logout
+export default Chart

@@ -2,6 +2,8 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import SideBar from '../Components/Sidebar';
 import Navbar from '../Components/Navbar';
+import Receivedtable from './Received/Receivedtable';
+import Footer from '../Components/Footer';
 
 const Received = () => {
   return (
@@ -11,9 +13,11 @@ const Received = () => {
     <Box sx={{ display: 'flex' }}>
     <SideBar/>
     <Box component="main" sx={{flexGrow: 1 , p:3}}>
-    <h2>Received Inventory</h2>
+    <Box height={30}/>
+    <Receivedtable/>
     </Box>
     </Box>
+    <Footer/>
     </>
   )
 }

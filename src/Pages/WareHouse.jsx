@@ -2,7 +2,8 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import SideBar from '../Components/Sidebar';
 import Navbar from '../Components/Navbar';
-
+import Waretable from './Warehouse/Waretable';
+import Footer from '../Components/Footer';
 const WareHouse = () => {
   return (
     <>
@@ -11,9 +12,11 @@ const WareHouse = () => {
     <Box sx={{ display: 'flex' }}>
     <SideBar/>
     <Box component="main" sx={{flexGrow: 1 , p:3}}>
-    <h2>Ware House</h2>
+    <Box height={30}/>
+    <Waretable/>
     </Box>
     </Box>
+    <Footer/>
     </>
   )
 }

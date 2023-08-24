@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './Sidebar.css';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -12,7 +13,6 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
 import { useNavigate } from 'react-router-dom';
 import { useAppStore } from '../appStore';
 import SupervisorAccountIcon from '@mui/icons-material/SupervisorAccount';
@@ -27,6 +27,7 @@ import FileDownloadDoneIcon from '@mui/icons-material/FileDownloadDone';
 import DomainIcon from '@mui/icons-material/Domain';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
+import BarChartIcon from '@mui/icons-material/BarChart';
 
 const drawerWidth = 240;
 
@@ -87,7 +88,7 @@ export default function SideBar() {
   const open = useAppStore((state)=> state.dopen)
 
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex'  , backgroundColor: 'lightblue' }}>
       <CssBaseline />
       <Box height={30}/>
       <Drawer variant="permanent" open={open}>
@@ -286,6 +287,27 @@ export default function SideBar() {
                   <FileDownloadDoneIcon/>
                 </ListItemIcon>
                 <ListItemText primary="Issue Inventory" sx={{ opacity: open ? 1 : 0 }} />
+              </ListItemButton>
+            </ListItem>
+
+            <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>navigate("/charts")}>
+              <ListItemButton
+                sx={{
+                  minHeight: 48,
+                  justifyContent: open ? 'initial' : 'center',
+                  px: 2.5,
+                }}
+              >
+                <ListItemIcon
+                  sx={{
+                    minWidth: 0,
+                    mr: open ? 3 : 'auto',
+                    justifyContent: 'center',
+                  }}
+                >
+                  <BarChartIcon/>
+                </ListItemIcon>
+                <ListItemText primary="Charts" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
 

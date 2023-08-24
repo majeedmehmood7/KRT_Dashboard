@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Navbar from '../Components/Navbar';
 import { GeoChart } from '../Charts/Geochart';
 import LocationTable from './Location/LocationTable';
+import Footer from '../Components/Footer';
 
 const Location = () => {
   return (
@@ -15,9 +16,13 @@ const Location = () => {
     <Box component="main" sx={{flexGrow: 1 , p:3}}>
     <Box height={40}/>
         <LocationTable/>
-    {/* <GeoChart/> */}
+        <Box height={30}/>
+    <GeoChart/>
+    <Box height={30}/>
+    
     </Box>
     </Box>
+    <Footer/>
     </>
   )
 }

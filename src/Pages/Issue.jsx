@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import Navbar from '../Components/Navbar';
 import SideBar from '../Components/Sidebar';
 import { Bar } from '../Charts/Barchart';
+import Tableissue from './Issue/Tableissue';
+import Footer from '../Components/Footer';
 const Issue = () => {
   return (
     <>
@@ -11,10 +13,11 @@ const Issue = () => {
     <Box sx={{ display: 'flex' }}>
     <SideBar/>
     <Box component="main" sx={{flexGrow: 1 , p:3}}>
-    <h2>Issue Inventory</h2>
-    <Bar/>
+    <Box height={30}/>
+    <Tableissue/>
     </Box>
     </Box>
+    <Footer/>
     </>
   )
 }

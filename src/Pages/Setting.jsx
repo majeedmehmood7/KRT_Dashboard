@@ -2,6 +2,7 @@ import React from 'react'
 import SideBar from '../Components/Sidebar';
 import Box from '@mui/material/Box';
 import Navbar from '../Components/Navbar';
+import Footer from '../Components/Footer';
 
 const Setting = () => {
   return (
@@ -14,6 +15,7 @@ const Setting = () => {
     <h2>Setting</h2>
     </Box>
     </Box>
+    <Footer/>
     </>
   )
 }
