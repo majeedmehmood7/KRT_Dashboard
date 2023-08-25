@@ -19,8 +19,8 @@ export function LineChart() {
   return (
     <Chart
       chartType="LineChart"
-      width="10vw" // Set width to 100vw for full viewport width
-      height="100px"
+      width="100%" // Set width to 100% for full viewport width
+      height="40vh" // Set height to 100vh for full viewport height
       data={data}
       options={options}
     />

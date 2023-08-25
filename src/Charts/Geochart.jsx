@@ -2,13 +2,13 @@ import React from "react";
 import { Chart } from "react-google-charts";
 
 export const data = [
-  ["Regions", "Help"],
+  ["Region", "Value"],
   ["Sindh", 200],
-  ["United States", 300],
-  ["Brazil", 400],
-  ["Canada", 500],
-  ["France", 600],
-  ["RU", 700],
+  ["Punjab", 300],
+  ["Khyber Pakhtunkhwa", 400],
+  ["Balochistan", 500],
+  ["Gilgit-Baltistan", 600],
+  ["Azad Kashmir", 700],
 ];
 
 export function GeoChart() {
@@ -21,7 +21,7 @@ export function GeoChart() {
             const chart = chartWrapper.getChart();
             const selection = chart.getSelection();
             if (selection.length === 0) return;
-            const region = data[selection[0].row + 1];
+            const region = data[selection[0].row + 1][0];
             console.log("Selected : " + region);
           },
         },
@@ -30,6 +30,12 @@ export function GeoChart() {
       width="100%"
       height="400px"
       data={data}
+      options={{
+        region: "PK", // Set the region to Pakistan
+        displayMode: "regions",
+        resolution: "provinces",
+      }}
     />
   );
 }
+ 

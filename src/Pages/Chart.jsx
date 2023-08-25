@@ -5,6 +5,7 @@ import Box from '@mui/material/Box';
 import { PieChart } from '../Charts/Piechart';
 import { GeoChart } from '../Charts/Geochart';
 import Footer from '../Components/Footer';
+import { LineChart } from '../Charts/LineChart';
 
 const Chart = () => {
   return (
@@ -16,6 +17,7 @@ const Chart = () => {
     <Box component="main" sx={{flexGrow: 1 , p:3}}>
     <PieChart/>
     <GeoChart/>
+    <LineChart/>
     </Box>
     </Box>
     <Footer/>

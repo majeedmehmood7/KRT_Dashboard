@@ -8,6 +8,7 @@ import Grid from '@mui/material/Grid';
 import { LineChart } from '../Charts/LineChart';
 import Footer from '../Components/Footer';
 import BarChart from '../Charts/Barchart';
+import Speedometer from '../Components/Speedometer';
 
 const Home = () => {
   return (
@@ -20,22 +21,25 @@ const Home = () => {
           <Cards />
           <Box height={30} />
           <Box height={30} />
+          <Speedometer/>
+          <Speedometer/>
           <BarChart/>
-          <Box height={30} />
+          {/* <Box height={30} />
           <h2>Pie Chart</h2>
           <PieChart/>
           <h2>Line Chart</h2>
-          <LineChart/>
+          <LineChart/> */}
 
-          {/* <Grid container spacing={2}>
-            <Grid item xs={10} md={4}>
+          <Grid container spacing={2}>
+            <Grid item xs={5} md={5}>
               <PieChart />
             </Grid>
 
-            <Grid item xs={6} md={6}>
+            <Grid item xs={5} md={5}>
               <LineChart />
+              
             </Grid>
-          </Grid> */}
+          </Grid>
          
         </Box>
       </Box>

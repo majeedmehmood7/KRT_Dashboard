@@ -1,3 +1,5 @@
-*body{
+.main{
     background-color: blue;
+    color: blanchedalmond;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }

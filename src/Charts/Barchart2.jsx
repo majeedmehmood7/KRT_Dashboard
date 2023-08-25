@@ -18,13 +18,13 @@ export const data = [
 
 export const options = {
   chart: {
-    title: "Performance",
+    title: "Cement-Bags",
     subtitle: "Karachi Relief Trust",
   },
   colors: ["blue", "red", "green"],
 };
 
-export default function BarChart() {
+export default function BarChart2() {
   const [modalOpen, setModalOpen] = useState(false);
 
   const openModal = () => {
@@ -66,8 +66,8 @@ export default function BarChart() {
       >
         <Box sx={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%, -50%)", width: "80%", maxWidth: "800px", bgcolor: "background.paper", boxShadow: 24, p: 4 }}>
           <h2 id="modal-title">Modal Chart</h2>
-          <div style={{ width: "100%", height: "600px" }}>
-            <Chart chartType="Bar" width="100%" height="100%" data={data} options={options} />
+          <div style={{ width: "50%", height: "300px" }}>
+            
           </div>
           <Button onClick={closeModal}>Close</Button>
         </Box>

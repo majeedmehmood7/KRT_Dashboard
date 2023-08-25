@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './Sidebar.css';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import MuiDrawer from '@mui/material/Drawer';
@@ -28,6 +27,9 @@ import DomainIcon from '@mui/icons-material/Domain';
 import SettingsIcon from '@mui/icons-material/Settings';
 import LogoutIcon from '@mui/icons-material/Logout';
 import BarChartIcon from '@mui/icons-material/BarChart';
+import './Sidebar.jsx';
+import Logo from '..//Assets//logo.png';
+
 
 const drawerWidth = 240;
 
@@ -88,18 +90,25 @@ export default function SideBar() {
   const open = useAppStore((state)=> state.dopen)
 
   return (
-    <Box sx={{ display: 'flex'  , backgroundColor: 'lightblue' }}>
+    <div className='main'>
+    <Box sx={{ display: 'flex'   }}>
       <CssBaseline />
-      <Box height={30}/>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
           <IconButton >
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
         </DrawerHeader>
-        <Divider />
+        
+       {/* Container for square logo and text */}
+       <div style={{ textAlign: 'center', marginTop: '10px' }}>
+            <div style={{ width: '70px', height: '70px', margin: '0 auto' }}>
+              <img src={Logo} alt="Logo" style={{ width: '100%', height: '100%', objectFit: 'cover' , marginTop:'5px' }} />
+            </div>
+            <h3><b>KRT</b></h3>
+          </div>
         <List>
-        <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>{navigate("/")}}>
+        <ListItem   disablePadding sx={{ display: 'block' }}  onClick={()=>{navigate("/")}}>
               <ListItemButton
                 sx={{
                   minHeight: 48,
@@ -311,7 +320,7 @@ export default function SideBar() {
               </ListItemButton>
             </ListItem>
 
-            <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>navigate("/about")}>
+            {/* <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>navigate("/about")}>
               <ListItemButton
                 sx={{
                   minHeight: 48,
@@ -330,9 +339,9 @@ export default function SideBar() {
                 </ListItemIcon>
                 <ListItemText primary="About" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
-            </ListItem>
+            </ListItem> */}
 
-            <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>navigate("/setting")}>
+            {/* <ListItem  disablePadding sx={{ display: 'block' }} onClick={()=>navigate("/setting")}>
               <ListItemButton
                 sx={{
                   minHeight: 48,
@@ -351,7 +360,7 @@ export default function SideBar() {
                 </ListItemIcon>
                 <ListItemText primary="Settings" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
-            </ListItem>
+            </ListItem> */}
 
             
 
@@ -375,12 +384,11 @@ export default function SideBar() {
                 <ListItemText primary="Logout" sx={{ opacity: open ? 1 : 0 }} />
               </ListItemButton>
             </ListItem>
-
+            
         </List>
-        <Divider />
-       
       </Drawer>
      
     </Box>
+    </div>
   );
 }
